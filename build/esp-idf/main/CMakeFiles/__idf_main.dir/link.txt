@@ -1,0 +1,2 @@
+/home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc libmain.a CMakeFiles/__idf_main.dir/mqtt_led.c.obj CMakeFiles/__idf_main.dir/__/__/AmazonRootCA1.pem.S.obj CMakeFiles/__idf_main.dir/__/__/certificate.pem.crt.S.obj CMakeFiles/__idf_main.dir/__/__/private.pem.key.S.obj
+/home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib libmain.a

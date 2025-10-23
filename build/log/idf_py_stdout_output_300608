@@ -1,0 +1,955 @@
+Command: /home/david/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/david/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/david/mqtt_led/build/mqtt_led.elf /home/david/mqtt_led/build/bootloader/bootloader.elf -m '/home/david/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/home/david/esp/esp-idf/tools/idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2954-g5ab96242e8 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 17 2025 14:33:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20868h (133224) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00030890 vaddr=3ffb0000 size=0416ch ( 16748) load[0m
+[0;32mI (144) esp_image: segment 2: paddr=00034a04 vaddr=40080000 size=0b614h ( 46612) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a287ch (665724) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000e28a4 vaddr=4008b614 size=0b188h ( 45448) load[0m
+[0;32mI (419) esp_image: segment 5: paddr=000eda34 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (431) boot: Disabling RNG early entropy source...[0m
+[0;32mI (441) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (450) cpu_start: Pro cpu start user code[0m
+[0;32mI (450) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) app_init: Application information:[0m
+[0;32mI (455) app_init: Project name:     mqtt_led[0m
+[0;32mI (459) app_init: App version:      1[0m
+[0;32mI (463) app_init: Compile time:     Oct 17 2025 14:33:40[0m
+[0;32mI (468) app_init: ELF file SHA256:  26deb1d60...[0m
+[0;32mI (472) app_init: ESP-IDF:          v6.0-dev-2954-g5ab96242e8[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (481) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (485) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB8B00 len 00027500 (157 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (511) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 4009679C len 00009864 (38 KiB): IRAM[0m
+[0;32mI (524) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (541) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (552) main_task: Started on CPU0[0m
+[0;32mI (562) main_task: Calling app_main()[0m
+[0;32mI (612) wifi:wifi driver task: 3ffc0db0, prio:23, stack:6656, core=0[0m
+[0;32mI (622) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (622) wifi:wifi certification version: v7.0[0m
+[0;32mI (632) wifi:config NVS flash: enabled[0m
+[0;32mI (632) wifi:config nano formatting: disabled[0m
+[0;32mI (632) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (642) wifi:Init management short buffer num: 32[0m
+[0;32mI (642) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (652) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (652) wifi:Init static rx buffer num: 10[0m
+[0;32mI (652) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (662) wifi_init: rx ba win: 6[0m
+[0;32mI (662) wifi_init: accept mbox: 6[0m
+[0;32mI (662) wifi_init: tcpip mbox: 32[0m
+[0;32mI (672) wifi_init: udp mbox: 6[0m
+[0;32mI (672) wifi_init: tcp mbox: 6[0m
+[0;32mI (672) wifi_init: tcp tx win: 5760[0m
+[0;32mI (682) wifi_init: tcp rx win: 5760[0m
+[0;32mI (682) wifi_init: tcp mss: 1440[0m
+[0;32mI (682) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (692) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (692) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (702) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (792) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (882) wifi:mode : sta (d4:d4:da:cf:5b:b8)[0m
+[0;32mI (882) wifi:enable tsf[0m
+[0;32mI (902) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (902) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (912) wifi:state: auth -> init (0x1c0)[0m
+[0;32mI (932) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (932) MQTT_LED: Wi-Fi desconectado, tentando reconectar...[0m
+[0;33mW (3352) MQTT_LED: Wi-Fi desconectado, tentando reconectar...[0m
+[0;32mI (3362) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3362) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3382) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3412) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3442) wifi:connected with Galaxy, aid = 8, channel 11, BW20, bssid = 86:b5:8f:3d:1c:91[0m
+[0;32mI (3442) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (3442) wifi:pm start, type: 1[0m
+
+[0;32mI (3442) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3482) wifi:<ba-add>idx:0 (ifx:0, 86:b5:8f:3d:1c:91), tid:0, ssn:1, winSize:64[0m
+[0;32mI (3502) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3502) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4482) esp_netif_handlers: sta ip: 10.225.63.100, mask: 255.255.255.0, gw: 10.225.63.124[0m
+[0;32mI (4482) MQTT_LED: Wi-Fi conectado[0m
+[0;32mI (7602) MQTT_LED: MQTT conectado[0m
+[0;32mI (7612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (7612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (8612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (9612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (10612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (11612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (12612) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (13622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (14622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (15622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (16622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (17622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (18622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (19622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (20622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (21622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (22632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (23632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (24632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (25632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (26632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (27632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (28632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (29632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (30632) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (31642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (32642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (33642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (34642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (35642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (36642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (37642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (38642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (39642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (40642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (41642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (42642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (43642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (44642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (45642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (46642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (47642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (48642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (49642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (50642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (51642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (52642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (53642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (54642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (55642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (56642) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (57652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (58652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (59652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (60652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (61652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (62652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (63652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (64652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (65652) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (66662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (67662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (68662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (69662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (70662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (71662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (72662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (73662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (74662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (75662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (76662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (77662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (78662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (79662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (80662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (81662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (82662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (83662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (84662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (85662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (86662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (87662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (88662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (89662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (90662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (91662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (92662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (93662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (94662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (95662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (96662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (97662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (98662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (99662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (100662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (101662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (102662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (103662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (104662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (105662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (106662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (107662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (108662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (109662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (110662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (111662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (112662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (113662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (114662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (115662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (116662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (117662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (118662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (119662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (120662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (121662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (122662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (123662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (124662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (125662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (126662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (127662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (128662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (129662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (130662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (131662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (132662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (133662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (134662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (135662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (136662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (137662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (138662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (139662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (140662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (141662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (142662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (143662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (144662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (145662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (146662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (147662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (148662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (149662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (150662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (151662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (152662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (153662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (154662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (155662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (156662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (157662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (158662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (159662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (160662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (161662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (162662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (163662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (164662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (165662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (166662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (167292) MQTT_LED: RECV [esp32/cmd]: ON[0m
+[0;32mI (167302) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (167662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (168662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (169662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (170662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (171662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (172662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (173662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (174622) MQTT_LED: RECV [esp32/cmd]: OFF[0m
+[0;32mI (174622) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (174662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (175662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (176662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (177662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (178662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (179662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (180662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (181662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (182662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (183662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (184662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (185662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (186662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (187662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (188662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (189662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (190662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (191662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (192662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (193662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (194662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (195662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (196662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (197662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (198662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (199662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (200662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (201662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (202662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (203662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (204662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (205662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (206662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (207662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (208662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (209662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (210662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (211582) MQTT_LED: RECV [esp32/cmd]: OFF[0m
+[0;32mI (211592) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (211662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (212662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (213662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (214662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (215662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (216662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (217122) MQTT_LED: RECV [esp32/cmd]: ON[0m
+[0;32mI (217132) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (217662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (218662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (219662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (220662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (221662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (222662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (223662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (224662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (225662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (226662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (227662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (228662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (229662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (230662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (231662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (232662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (233662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (234662) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (235342) MQTT_LED: RECV [esp32/cmd]: OFF[0m
+[0;32mI (235352) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (235662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (236662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (237662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (238662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (239662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (240662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (241662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (242662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (243662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (244662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (245662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (246662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (247662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (248662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (249662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (250662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (251662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (252662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (253662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (254662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (255662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (256662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (257662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (258662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (259662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (260662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (261662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (262662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (263662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (264662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (265662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (266662) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;33mW (277672) transport_base: Poll timeout or error, errno=Success, fd=54, timeout_ms=10000[0m
+[1;31mE (277672) mqtt_client: Writing didn't complete in specified timeout: errno=0[0m
+[0;33mW (277672) MQTT_LED: MQTT desconectado[0m
+[0;32mI (277672) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (278682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (279682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (280682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (281682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (282682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (283682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (284682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (285682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (286682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (287682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (288682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (289682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (290682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (291682) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;33mW (305482) esp-tls: Failed to open new connection in specified timeout[0m
+[1;31mE (305482) transport_base: Failed to open a new connection[0m
+[1;31mE (305482) mqtt_client: Error transport connect[0m
+[0;33mW (305482) MQTT_LED: MQTT desconectado[0m
+[0;32mI (305492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (306492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (307492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (308492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (309492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (310492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (311492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (312492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (313492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (314492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (315492) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (319202) MQTT_LED: MQTT conectado[0m
+[0;32mI (319212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (319212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (320212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (321212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (322212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (323212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (324212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (325212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (326212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (326372) MQTT_LED: RECV [esp32/cmd]: ON[0m
+[0;32mI (326372) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (327212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (328212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (329212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (330212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (331212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (332212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (333212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (334212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (335212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (336212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (336822) MQTT_LED: RECV [esp32/cmd]: OFF[0m
+[0;32mI (336832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (337212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (338212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (339212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (340212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (340922) MQTT_LED: RECV [esp32/cmd]: ON[0m
+[0;32mI (340922) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (341212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (342212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (343212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (344212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (345212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (346212) MQTT_LED: PUB [esp32/status] payload={"led":1,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (346232) MQTT_LED: RECV [esp32/cmd]: OFF[0m
+[0;32mI (346232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (347212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (348212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (349212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (350212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (351212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (352212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (353212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (354212) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (355222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (356222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (357222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (358222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (359222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (360222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (361222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (362222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (363222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (364222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (365222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (366222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (367222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (368222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (369222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (370222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (371222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (372222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (373222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (374222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (375222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (376222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (377222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (378222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (379222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (380222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (381222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (382222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (383222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (384222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (385222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (386222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (387222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (388222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (389222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (390222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (391222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (392222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (393222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (394222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (395222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (396222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (397222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (398222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (399222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (400222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (401222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (402222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (403222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (404222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (405222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (406222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (407222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (408222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (409222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (410222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (411222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (412222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (413222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (414222) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (415232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (416232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (417232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (418232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (419232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (420232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (421232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (422232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (423232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (424232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (425232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (426232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (427232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (428232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (429232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (430232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (431232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (432232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (433232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (434232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (435232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (436232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (437232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (438232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (439232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (440232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (441232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (442232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (443232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (444232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (445232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (446232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (447232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (448232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (449232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (450232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (451232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (452232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (453232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (454232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (455232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (456232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (457232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (458232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (459232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (460232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (461232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (462232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (463232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (464232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (465232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (466232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (467232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (468232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (469232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (470232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (471232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (472232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (473232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (474232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (475232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (476232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (477232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (478232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (479232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (480232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (481232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (482232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (483232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (484232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (485232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (486232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (487232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (488232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (489232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (490232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (491232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (492232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (493232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (494232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (495232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (496232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (497232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (498232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (499232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (500232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (501232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (502232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (503232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (504232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (505232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (506232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (507232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (508232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (509232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (510232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (511232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (512232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[1;31mE (513142) esp-tls-mbedtls: read error :-0x0050[0m
+[1;31mE (513142) transport_base: esp_tls_conn_read error, errno=Connection reset by peer[0m
+[1;31mE (513142) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=104[0m
+[1;31mE (513152) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (513162) MQTT_LED: MQTT desconectado[0m
+[0;32mI (513232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (514232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (515232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (516232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (517232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (518232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (519232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (520232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (521232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (522232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (523232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (524232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (525232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (526232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (527232) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (531792) MQTT_LED: MQTT conectado[0m
+[0;32mI (531792) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (531802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (532802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (533802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (534802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (535802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (536802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (537802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (538802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (539802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (540802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (541802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (542802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (543802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (544802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (545802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (546802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (547802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (548802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (549802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (550802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (551802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (552802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (553802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (554802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (555802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (556802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (557802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (558802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (559802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (560802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (561802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (562802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (563802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (564802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (565802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (566802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (567802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (568802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (569802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (570802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (571802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (572802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (573802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (574802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (575802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (576802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (577802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (578802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (579802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (580802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (581802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (582802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (583802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (584802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (585802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (586802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (587802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (588802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (589802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (590802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (591802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (592802) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (593812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (594812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (595812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (596812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (597812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (598812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (599812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (600812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (601812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (602812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (603812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (604812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (605812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (606812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (607812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (608812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (609812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (610812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (611812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (612812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (613812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (614812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (615812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (616812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (617812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (618812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (619812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (620812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (621812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (622812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (623812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (624812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (625812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (626812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (627812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (628812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (629812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (630812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (631812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (632812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (633812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (634812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (635812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (636812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (637812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (638812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (639812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (640812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (641812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (642812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (643812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (644812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (645812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (646812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (647812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (648812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (649812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (650812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (651812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (652812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (653812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (654812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (655812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (656812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (657812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (658812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (659812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (660812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (661812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (662812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (663812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (664812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (665812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (666812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (667812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (668812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (669812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (670812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (671812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (672812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (673812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (674812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (675812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (676812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (677812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (678812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (679812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (680812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (681812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (682812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (683812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (684812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (685812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (686812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (687812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (688812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (689812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (690812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (691812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (692812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (693812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (694812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (695812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (696812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (697812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (698812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (699812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (700812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (701812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (702812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (703812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (704812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (705812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (706812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (707812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (708812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (709812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (710812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (711812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (712812) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (713822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (714822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (715822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (716822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (717822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (718822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (719822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (720822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (721822) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (722832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (723832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (724832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (725832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (726832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (727832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (728832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (729832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (730832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (731832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (732832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (733832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (734832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (735832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (736832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (737832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (738832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (739832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (740832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (741832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (742832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (743832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (744832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (745832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (746832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (747832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (748832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (749832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (750832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (751832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (752832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (753832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (754832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (755832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (756832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (757832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (758832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (759832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (760832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (761832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (762832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (763832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (764832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (765832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (766832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (767832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (768832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (769832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (770832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (771832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (772832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (773832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (774832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (775832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (776832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (777832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (778832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (779832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (780832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (781832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (782832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (783832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (784832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (785832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (786832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (787832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (788832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (789832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (790832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (791832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (792832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (793832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (794832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (795832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (796832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (797832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (798832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (799832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (800832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (801832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (802832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (803832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (804832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (805832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (806832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (807832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (808832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (809832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (810832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (811832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (812832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (813832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (814832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (815832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (816832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (817832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (818832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (819832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (820832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (821832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (822832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (823832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (824832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (825832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (826832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (827832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (828832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (829832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (830832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (831832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (832832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (833832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (834832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (835832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (836832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (837832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (838832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (839832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (840832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (841832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (842832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (843832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (844832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (845832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (846832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (847832) MQTT_LED: PUB [esp32/status] payload={"led":0,"temp_c":0.00,"hum_pct":0.00}[0m
+[0;32mI (848832) MQTT_LED: PUB [esp32/status] p

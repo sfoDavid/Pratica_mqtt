@@ -1,0 +1,31 @@
+esp-idf/log/CMakeFiles/__idf_log.dir/src/noos/log_lock.c.obj: \
+ /home/david/esp/esp-idf/components/log/src/noos/log_lock.c \
+ /home/david/esp/esp-idf/components/esp_libc/platform_include/assert.h \
+ /home/david/mqtt_led/build/bootloader/config/sdkconfig.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stddef.h \
+ /home/david/esp/esp-idf/components/esp_libc/platform_include/sys/reent.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/_types.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h \
+ /home/david/esp/esp-idf/components/esp_libc/platform_include/sys/lock.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stdint.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
+ /home/david/esp/esp-idf/components/log/include/esp_private/log_lock.h \
+ /home/david/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stdbool.h

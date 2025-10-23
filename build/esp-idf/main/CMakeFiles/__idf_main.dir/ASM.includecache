@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/mqtt_led/build/AmazonRootCA1.pem.S
+
+/home/david/mqtt_led/build/certificate.pem.crt.S
+
+/home/david/mqtt_led/build/private.pem.key.S
+
